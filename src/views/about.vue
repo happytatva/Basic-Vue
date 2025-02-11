@@ -94,11 +94,5 @@
     align-items: center;
     @include rem-fallback(margin, 8, 0);
     @include rem-fallback(gap, 15);
-    .secondary-btn {
-      background-color: $teal;
-      &:hover {
-        background-color: $teal2;
-      }
-    }
   }
 </style>
