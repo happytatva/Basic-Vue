@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $black;
+  color: $white;
+}
+#app {
+  text-align: center;
+}
+.container {
+  @include rem-fallback(max-width, 1440);
+  @include rem-fallback(padding, 0, 25);
+  margin: 0 auto;
+}
+p {
+  @include rem-fallback(margin-bottom, 15);
+  @include rem-fallback(font-size, 20);
+  font-weight: 500;
+}
+.custom-box {
+  @include rem-fallback(padding, 10);
+  @include rem-fallback(margin, 10);
+  @include rem-fallback(border-radius, 10);
+  border: 2px solid $teal;
+}
+.btn {
+  background-color: $primary-color;
+  color: $dark-teal;
+  @include rem-fallback(padding, 10, 22);
+  @include rem-fallback(border-radius, 8);
+  @include rem-fallback(font-size, 16);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: $teal;
+  }
+}
